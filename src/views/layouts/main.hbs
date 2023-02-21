@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css">
+    <style>
+      :root {
+          --justify-important: left;
+          --color-text-secondary: #666;
+      }
+
+      body {
+        -webkit-print-color-adjust:exact !important;
+        print-color-adjust:exact !important;
+        margin: 1.5rem;
+      }
+
+      @page {
+        margin: 0;
+      }
+
+      header, footer, main {
+        padding: 0 1rem;
+      }
+
+      header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+
+      table {
+        display: table;
+      }
+
+      table thead {
+        background-color: transparent;
+        color: var(--text-color);
+      }
+
+      table thead th {
+       border-bottom: 3px solid var(--color-table);
+      }
+
+      th, td {
+        white-space: normal;
+      }
+
+      section {
+        flex-direction: column;
+        margin-bottom: 12px;
+      }
+
+      .business, .ncf {
+        flex-basis: 50%;
+      }
+
+      .business-name {
+        margin-bottom: 0;
+      }
+
+      .ncf {
+        align-items: flex-end;
+      }
+
+      footer {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 6rem;
+      }
+
+      .author-signature {
+        width: 30%;
+        border-bottom: 1px solid gray;
+        margin-bottom: 8px;
+      }
+
+      .customer-info {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 2rem;
+      }
+
+      .customer-info-contact {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .customer-info-entry {
+        display: flex;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .customer-info-entry-label {
+        display: inline-flex;
+        padding: 2px 4px;
+        min-width: 180px;
+        margin-right: 4px;
+      }
+
+      .customer-info-entry-value {
+        flex-grow: 1;
+        margin-right: 4px;
+      }
+
+      .invoice-summary {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .invoice-total {
+        border-bottom: 3px solid var(--color-table);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .total-dop {
+        font-size: 1.4rem;
+      }
+
+      .no-border {
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    {{{body}}}
+  </body>
+</html>

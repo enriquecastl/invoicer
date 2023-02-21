@@ -1,0 +1,113 @@
+<header>
+  <section class="business">
+    <h2 class="business-name">
+      {{invoice.business.name}}
+    </h2>
+    </div>
+    <div class="business-id">{{invoice.business.id}}</div>
+    <div><small>{{{displayBusinessAddress invoice.business}}}</small></div>
+    <div><small>{{invoice.business.phoneNumber}}</small></div>
+    <div>
+      <small>{{invoice.business.website}}</small>
+    </div>
+    <div>
+      <small>{{invoice.business.emailAddress}}</small>
+    </div>
+    <div><small>Contribuyente acogido al
+      {{displayBusinessTaxRegime invoice.business}}</small></div>
+  </section>
+  <section class="ncf">
+    <div>
+      <strong>
+        {{displayInvoiceNCFCode invoice.ncf}}
+      </strong>
+    </div>
+    <div>{{displayInvoiceNCFDescription invoice.ncf}}</div>
+  </section>
+</header>
+<main>
+  <section class="invoice-date">
+    <div>
+      <span>
+        <strong>Fecha de expedición (DD/MM/AA)</strong>
+      </span>
+      <span>{{formatDate invoice.creationDate}}</span>
+    </div>
+    <div>
+      <span>
+        <strong>Fecha de vencimiento (DD/MM/AA)</strong>
+      </span>
+      <span>{{displayExpirationDate invoice}}</span>
+    </div>
+  </section>
+  <section class="customer-info">
+    <div class="customer-info-entry">
+      <span class="customer-info-entry-label"><strong>Compañía</strong></span>
+      <span class="customer-info-entry-value">{{invoice.customer.name}}</span>
+    </div>
+    <div class="customer-info-entry">
+      <span class="customer-info-entry-label"><strong>Dirección</strong></span>
+      <span class="customer-info-entry-value">{{invoice.customer.address}}</span>
+    </div>
+    <div class="customer-info-entry">
+      <span class="customer-info-entry-label"><strong>Teléfono</strong></span>
+      <span class="customer-info-entry-value">{{invoice.customer.phoneNumber}}</span>
+    </div>
+    <div class="customer-info-entry no-border">
+      <span class="customer-info-entry-label"><strong>Correo electrónico</strong></span>
+      <span class="customer-info-entry-value">{{invoice.customer.emailAddress}}</span>
+    </div>
+  </section>
+  <section class="invoice-items">
+    <table>
+      <thead>
+        <tr>
+          <th>Producto o Servicio</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Descuento</th>
+          <th>Impuesto</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each invoice.entries as |entry|}}
+          <tr>
+            <td>{{entry.productOrService}}</td>
+            <td>{{formatCurrency price}}</td>
+            <td>{{entry.quantity}}</td>
+            <td>{{displayDiscount discount}}</td>
+            <td>{{displayEntryTax tax}}</td>
+            <td>{{displayEntrySubtotal entry}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </section>
+  <section class="invoice-summary">
+    <div>
+      Subtotal
+      {{displayInvoiceTotal invoice}}
+    </div>
+    <div class="invoice-total">
+      <strong class="total-usd">
+        Total
+        {{displayInvoiceTotal invoice}}
+      </strong>
+      <strong class="total-dop">
+        Total {{displayInvoiceTotalDop invoice}}
+      </strong>
+    </div>
+  </section>
+</main>
+<footer>
+  <img
+    class="author-signature"
+    src="{{invoice.author.signature}}"
+    alt="{{invoice.author.name}}'s signature"
+  />
+  <div class="author-name">
+    Elaborado por {{invoice.author.name}}
+  </div>
+
+</footer>

@@ -1,0 +1,21 @@
+{
+  "imports": {
+    "path": "https://deno.land/std@0.177.0/path/mod.ts",
+    "std/": "https://deno.land/std@0.177.0/",
+    "testing/": "https://deno.land/std@0.177.0/testing/",
+    "sqlite": "https://deno.land/x/sqlite@v3.7.0/mod.ts"
+  },
+  "fmt": {
+    "options": {
+      "lineWidth": 100,
+      "singleQuote": true
+    }
+  },
+  "tasks": {
+    "init": "deno run --allow-env --allow-read --allow-write src/scripts/init.ts",
+    "create": "deno run --allow-env --allow-read --allow-write src/scripts/create.ts",
+    "print": "deno run --allow-run --allow-env --allow-read --allow-write src/scripts/print.ts",
+    "test": "deno test --allow-read",
+    "test:watch": "deno test --allow-read --watch"
+  }
+}
