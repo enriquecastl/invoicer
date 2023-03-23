@@ -1,0 +1,7 @@
+{
+  "id": "customer-id",
+  "name": "Customer Name",
+  "address": "Customer Address",
+  "emailAddress": "email@customer.com",
+  "phoneNumber": "999.999.9999"
+}

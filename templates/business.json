@@ -1,0 +1,11 @@
+{
+  "id": "business-id",
+  "name": "Business Name",
+  "phoneNumber": "999.999.9999",
+  "address": "Business Address",
+  "municipality": "Business Municipality",
+  "province": "Business Province",
+  "emailAddress": "email@address.com",
+  "website": "business-website.info",
+  "taxRegime": "RST"
+}

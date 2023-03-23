@@ -1,0 +1,8 @@
+{
+  "baseDir": "/path/to/dir/where/all/config/files/are/located",
+  "databasePath": "invoices.sqlite",
+  "defaultCustomer": "customer.json",
+  "defaultBusiness": "business.json",
+  "defaultInvoiceAuthor": "invoiceAuthor.json",
+  "ncf": "ncf.json"
+}

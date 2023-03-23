@@ -1,0 +1,14 @@
+{
+  "creationDate": "2023-04-01",
+  "paymentDeadline": 15,
+  "dopExchangeRate": 55.1,
+  "entries": [
+    {
+      "productOrService": "Software development services",
+      "price": 100.0,
+      "quantity": 1,
+      "discount": 0,
+      "tax": 0
+    }
+  ]
+}
