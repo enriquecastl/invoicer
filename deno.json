@@ -13,7 +13,7 @@
   },
   "tasks": {
     "init": "deno run --allow-env --allow-read --allow-write src/scripts/init.ts",
-    "create": "deno run --allow-env --allow-read --allow-write src/scripts/create.ts",
+    "create": "deno task init && deno run --allow-env --allow-read --allow-write src/scripts/create.ts",
     "print": "deno run --allow-run --allow-env --allow-read --allow-write src/scripts/print.ts",
     "test": "deno test --allow-read",
     "test:watch": "deno test --allow-read --watch"
