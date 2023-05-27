@@ -4,5 +4,7 @@
   "defaultCustomer": "customer.json",
   "defaultBusiness": "business.json",
   "defaultInvoiceAuthor": "invoiceAuthor.json",
-  "ncf": "ncf.json"
+  "ncf": "ncf.json",
+  "printDest": "",
+  "defaultInvoiceEntryFile": ""
 }
