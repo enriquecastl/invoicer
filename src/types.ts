@@ -17,12 +17,12 @@ export interface Business {
   province: string;
   emailAddress: string;
   website: string;
-  taxRegime: 'RST';
+  taxRegime: "RST";
 }
 
 export type PaymentDeadline = 15 | 30 | 60;
 
-export type NCFType = 'B02';
+export type NCFType = "B02";
 
 export type NCFCode = number;
 
@@ -45,7 +45,7 @@ export interface InvoiceEntry {
   price: number;
   discount: number;
   quantity: number;
-  tax: number | 'E';
+  tax: number | "E";
 }
 
 export interface Invoice {
@@ -75,6 +75,8 @@ export interface Service<T, V = void> {
 
 export interface Config {
   databasePath?: string;
+  printDest?: string;
+  defaultInvoiceEntryFile?: string;
   defaultCustomer: Customer;
   defaultBusiness: Business;
   defaultInvoiceAuthor: InvoiceAuthor;
